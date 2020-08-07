@@ -1,0 +1,829 @@
+.item-navigation{
+    margin-bottom: 50px;
+    padding: 0 60px;
+}
+
+.main{
+    /* overflow: hidden; Исправляет баг вызова горизонтальной полосы прокрутки */
+}
+
+
+.bread-crumbs{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+}
+
+.crumb-item{
+    margin-right: 40px;
+
+    position: relative;
+}
+
+.crumb-item::after{
+    position: absolute;
+    content: "";
+
+    top: 13px;
+    right: -22px;
+
+    width: 4px;
+    height: 7px;
+
+    background-image: url(../img/MainContent/nav-arrow.svg);
+}
+
+.crumb-item:last-child a{
+    pointer-events: none;
+}
+
+.crumb-item:last-child::after{
+    display: none;
+}
+
+.crumb{
+    font-size: 14px;
+    
+    line-height: 24px;
+
+    color: rgba( 0, 0, 0, .3);
+}
+.crumb:hover,
+.crumb:focus{
+    color: rgba( 0, 0, 0, .6);
+}
+.crumb:active{
+    color: rgba( 0, 0, 0, .1);
+}
+
+
+.main-content{
+    position: relative;
+}
+
+.main-content::after{
+    position: absolute;
+
+    content: "";
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background-color: #000000;
+    opacity: .08;
+
+    z-index: -1;
+}
+
+.main-content .container{
+    display: flex;
+}
+
+
+
+
+
+.catalog{
+    position: relative;
+
+    margin-left: 70px;
+    width: 100%;
+}
+
+/* .catalog::before{
+    position: absolute;
+    content: "";
+
+    top: 0;
+    left: -70px;
+
+    width: 100vw;
+    height: 70px;
+
+    z-index: -20;
+
+    background-color: rgba( 0, 0, 0, .08);
+} */
+
+.catalog-sort{ 
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
+
+.sort-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+}
+
+.sort-item{
+    margin-right: 30px;
+}
+
+
+.sort-link{
+    color: #000000;
+    opacity: 0.3;
+}
+.current-link{
+    opacity: 1 !important; 
+}
+
+.sort-link:hover,
+.sort-link:focus{
+    opacity: .6;
+}
+
+.sort-link:active{
+    opacity: 1;
+}
+
+
+.sort-method{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+
+    width: 40px;
+}
+
+.descending-link,
+.ascending-link{
+    display: block;
+    box-sizing: border-box;
+
+    width: 11px;
+    height: 10px;
+
+    overflow: hidden;
+
+    opacity: .2;
+}
+
+.descending-link{
+    border-style: solid;
+    border-width: 11px 6px 0px 6px; /* размер и форма */ 
+    border-color: #000000 transparent transparent transparent;
+}
+
+.ascending-link{
+    border-style: solid;
+    border-width: 0px 6px 11px 6px; /* размер и форма */ 
+    border-color: transparent transparent #000000 transparent;
+}
+
+.current-method{
+    opacity: 1 !important;
+}
+
+
+.descending-link:hover,
+.descending-link:focus,
+.ascending-link:focus,
+.ascending-link:hover{
+    opacity: .4;
+}
+
+.descending-link:active,
+.ascending-link:active{
+    opacity: 1;
+}
+
+
+
+.headline3{
+    padding: 23px 0;
+    display: block;
+    margin: 0;
+}
+
+
+.filter{
+    width: 330px;
+    
+    padding: 0px 70px 25px 60px;
+    position: relative;
+}
+
+
+.filter::before{
+    position: absolute;
+    content: "";
+
+    top: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100%;
+
+    z-index: -20;
+
+    background-color: rgba( 0, 0, 0, .08);
+}
+
+
+.filter .headline3{
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.filter .headline3::after{
+    /* position: absolute;
+    content: "";
+
+    top: 0;
+    right: -70px;
+
+    width: 100vw;
+    height: 100%;
+
+    z-index: -20;
+
+    background-color: #dcdcdc; */
+}
+
+
+
+
+
+/* Фильтры */
+
+.filter-cost-wrap{
+    padding: 13px 0 40px 0;
+
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 13px;
+}
+
+.filter-headline{
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+
+
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin: 0;
+}    
+
+.filter-cost-wrap .filter-headline{
+    margin-bottom: 31px;
+}
+
+
+.filter-cost-wrap input[type=range]{
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #dbdbdb;
+    height: 2px;
+}
+
+
+.filter-cost-wrap  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -2px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+    box-shadow: 1px 1px 1px #000000; /* Добавляем классные эффекты для слайдера! */
+
+    position: relative;
+}
+
+
+
+.cost-range{
+    margin: 0;
+    padding: 0;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, .2);
+
+    font-weight: 300;
+
+    position: relative;
+}
+
+.range-to{
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 83px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилизация Чекбоксов и списка цветов */
+
+.filter-colors{
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    padding: 0 0 41px 0;
+
+    border-bottom: 2px solid #000000;
+    margin-bottom: 13px;
+}
+
+.filter-colors .filter-headline{
+    margin-bottom: 25px;
+}
+
+
+.filter-colors-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.colors-item input[type=checkbox]{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.colors-item input[type=checkbox]:hover + .colors-checkbox::after,
+.colors-item input[type=checkbox]:focus + .colors-checkbox::after,
+.colors-item input[type=checkbox]:hover + .colors-checkbox::before,
+.colors-item input[type=checkbox]:focus + .colors-checkbox::before{
+    opacity: .6;
+}
+
+.colors-item input[type=checkbox]:active + .colors-checkbox::after,
+.colors-item input[type=checkbox]:active + .colors-checkbox::before{
+    opacity: 1;
+}
+
+.colors-checkbox{
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+
+    font-size: 14px;
+    line-height: 40px;
+
+    color: rgba( 0, 0, 0, 1);
+
+    padding-left: 40px;
+
+    display: flex;
+}
+
+.colors-checkbox::after{
+    position: absolute;
+
+    content: "";
+
+    left: 0px;
+    top: 8px;
+
+    width: 23px;
+    height: 23px;
+
+    background-image: url(../img/MainContent/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+.colors-checkbox::before{
+    position: absolute;
+
+    content: "";
+
+    left: 0px;
+    top: 8px;
+
+    width: 27px;
+    height: 23px;
+
+    background-image: url(../img/MainContent/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+
+    display: none;
+}
+
+
+
+.colors-item input[type=checkbox]:checked + .colors-checkbox::after{
+    display: none;
+}
+.colors-item input[type=checkbox]:checked + .colors-checkbox::before{
+    display: block;
+}
+
+
+
+.input-blocked{
+    opacity: .25 !important;
+    pointer-events: none;
+}
+
+
+
+/* / Стилизация Чекбоксов и списка цветов */
+
+
+/* Выбор окна bluetooth */
+
+
+
+
+
+.bluetooth-choose{
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    margin-bottom: 40px;
+}
+
+.bluetooth-choose .filter-headline{
+    margin-bottom: 32px;
+}
+
+.bluetooth-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.bluetooth-radio{
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+
+    font-size: 14px;
+    line-height: 40px;
+
+    color: rgba( 0, 0, 0, 1);
+
+    padding-left: 40px;
+
+    display: flex;
+}
+
+.bluetooth-item input[type=radio]{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.bluetooth-item input[type=radio]:hover + .bluetooth-radio::after,
+.bluetooth-item input[type=radio]:hover + .bluetooth-radio::before,
+.bluetooth-item input[type=radio]:focus + .bluetooth-radio::after,
+.bluetooth-item input[type=radio]:focus + .bluetooth-radio::before{
+    opacity: .6;
+}
+
+.bluetooth-item input[type=radio]:hover + .bluetooth-radio::after,
+.bluetooth-item input[type=radio]:hover + .bluetooth-radio::before{
+    opacity: 1;
+}
+
+.bluetooth-radio{
+    position: relative;
+    width: max-content;
+}
+
+.bluetooth-radio::after{
+    position: absolute;
+
+    content: "";
+
+    left: 0px;
+    top: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url(../img/MainContent/radio-off.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+.bluetooth-radio::before{
+    position: absolute;
+
+    content: "";
+
+    left: 0px;
+    top: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url(../img/MainContent/radio-on.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+
+    display: none;
+}
+
+
+
+.bluetooth-item input[type=radio]:checked + .bluetooth-radio::after{
+    display: none;
+}
+.bluetooth-item input[type=radio]:checked + .bluetooth-radio::before{
+    display: block;
+}
+
+/* /Выбор окна bluetooth */
+
+
+
+/* /Фильтры */
+
+
+
+
+/* Каталг */
+
+.main-catalog{
+    padding: 70px 0 75px 0;
+}
+
+.catalog-items{
+    margin-bottom: 40px;
+}
+
+.catalog-items-list{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+.catalog-item{
+    position: relative;
+}
+
+.catalog-img{
+
+}
+
+.catalog-img img{
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 20px;
+}
+
+.new-item{
+    position: relative;
+}
+
+.new-item::after{
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    content: "new";
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+
+    right: 30px;
+    top: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    border: 2px solid #000000;
+    border-radius: 30px;
+
+    opacity: .1;
+
+    background-color: transparent;
+
+    z-index: 3;
+}
+
+.item-buy{
+    position: absolute;
+    z-index: 4;
+
+    top: 0;
+    left: 0;
+
+    width: 360px;
+    height: 380px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding-top: 170px;
+
+    background-color: rgba(238,238,238, .7);
+
+    display: none;
+}
+
+.item-buy .button{
+    margin-bottom: 11px;
+}
+
+.item-buy a{
+    color: rgba( 0, 0, 0, .5);
+
+    font-size: 13px;
+    line-height: 36px;
+}
+
+.item-buy a:focus,
+.item-buy a:hover{
+    color: rgba( 0, 0, 0, 1);
+}
+.item-buy a:active{
+    color: rgba( 0, 0, 0, .2);
+}
+
+
+.catalog-img:hover + .item-buy{
+    display: flex;
+}
+
+.item-buy:hover{
+    display: flex;
+}
+
+.item-descritpion{
+    border-collapse: collapse;
+
+    width: 100%;
+
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+}
+
+.item-descritpion tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.item-name{
+    font-size: 18px;
+    line-height: 24px;
+
+    font-weight: 700;
+
+    width: 260px;
+}
+
+.item-cost{
+    font-weight: 300;
+
+    width: max-content;
+}
+
+
+
+
+
+.catalog-navigation{
+    width: 100%;
+
+    background-color: rgba( 0, 0, 0, .08);
+
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    line-height: 24px;
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-navigation__button{
+    display: block;
+
+    width: max-content;
+
+    font-size: 16px;
+    line-height: 24px;
+    padding: 25px 30px;
+
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 1);
+
+    font-weight: 700;
+
+    letter-spacing: 3.5px; 
+
+    outline: none;
+    border: none;
+
+    width: 137px;
+    text-align: center;
+}
+
+.catalog-navigation__button:hover,
+.catalog-navigation__button:focus{
+    background-color: #d9d9d9;
+}
+
+.catalog-navigation__button:active{
+    color: rgba(0, 0, 0, .3);
+}
+
+.pages-list{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+
+    width: max-content;
+
+    padding: 0 40px;
+
+    align-items: center;
+}
+
+
+.pages-item{
+    margin-right: 32px;
+}
+.pages-item:last-child{
+    margin: 0;
+}
+
+.pages-link{
+    color: rgba( 0, 0, 0, .3);
+}
+.pages-link:hover,
+.pages-link:focus{
+    color: rgba( 0, 0, 0, .6);
+}
+.pages-link:active{
+    color: rgba( 0, 0, 0, 1);
+}
+
+.current-page-link{
+    color: rgba( 0, 0, 0, 1) !important;
+}
+
+/* /Каталог */
