@@ -14,6 +14,10 @@
 
     list-style: none;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
 }
 
@@ -81,6 +85,8 @@
 }
 
 .main-content .container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -111,6 +117,8 @@
 } */
 
 .catalog-sort{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
     position: relative;
 }
@@ -122,10 +130,17 @@
 
 .sort-list{
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 
     width: 100%;
 }
@@ -159,8 +174,12 @@
 
     list-style: none;
     margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     width: 40px;
 }
@@ -168,7 +187,8 @@
 .descending-link,
 .ascending-link{
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     width: 11px;
     height: 10px;
@@ -309,7 +329,8 @@
     background: #ffffff;
     cursor: pointer;
     margin-top: -2px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
-    box-shadow: 1px 1px 1px #000000; /* Добавляем классные эффекты для слайдера! */
+    -webkit-box-shadow: 1px 1px 1px #000000;
+            box-shadow: 1px 1px 1px #000000; /* Добавляем классные эффекты для слайдера! */
 
     position: relative;
 }
@@ -332,6 +353,8 @@
 }
 
 .range-to{
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     position: absolute;
     top: 0;
@@ -397,6 +420,8 @@
 .colors-checkbox{
     position: relative;
     cursor: pointer;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 
     font-size: 14px;
@@ -405,6 +430,10 @@
     color: rgba( 0, 0, 0, 1);
 
     padding-left: 40px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
 }
@@ -494,6 +523,8 @@
 .bluetooth-radio{
     position: relative;
     cursor: pointer;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 
     font-size: 14px;
@@ -502,6 +533,10 @@
     color: rgba( 0, 0, 0, 1);
 
     padding-left: 40px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
 }
@@ -526,6 +561,8 @@
 
 .bluetooth-radio{
     position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -597,12 +634,21 @@
 
     list-style: none;
 
+    display: -ms-grid;
+
     display: grid;
 
+    -ms-grid-columns: 1fr 40px 1fr;
+
     grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 40px 1fr;
     grid-template-columns: 1fr 1fr;
 
-    column-gap: 40px;
+    -webkit-column-gap: 40px;
+
+       -moz-column-gap: 40px;
+
+            column-gap: 40px;
     row-gap: 40px;
 }
 
@@ -628,9 +674,17 @@
 .new-item::after{
     position: absolute;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     content: "new";
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
@@ -663,10 +717,21 @@
     width: 360px;
     height: 380px;
 
-    display: flex;
-    flex-direction: column;
+    display: -webkit-box;
 
-    align-items: center;
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
     padding-top: 170px;
 
     background-color: rgba(238,238,238, .7);
@@ -695,10 +760,14 @@
 
 
 .catalog-img:hover + .item-buy{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .item-buy:hover{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -707,16 +776,25 @@
 
     width: 100%;
 
-    justify-content: space-between;
-    box-sizing: border-box;
+    -webkit-box-pack: justify;
+
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 1);
 }
 
 .item-descritpion tr{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 
@@ -731,6 +809,10 @@
 
 .item-cost{
     font-weight: 300;
+
+    width: -webkit-max-content;
+
+    width: -moz-max-content;
 
     width: max-content;
 }
@@ -750,12 +832,24 @@
     line-height: 24px;
 
 
+    display: -webkit-box;
+
+
+    display: -ms-flexbox;
+
+
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .catalog-navigation__button{
     display: block;
+
+    width: -webkit-max-content;
+
+    width: -moz-max-content;
 
     width: max-content;
 
@@ -793,14 +887,28 @@
 
     list-style: none;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    width: -webkit-max-content;
+
+    width: -moz-max-content;
 
     width: max-content;
 
     padding: 0 40px;
 
-    align-items: center;
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
 }
 
 
