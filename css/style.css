@@ -2635,7 +2635,8 @@ title{
 }
 
 .catalog-img{
-
+    width: auto;
+    height: 409px;
 }
 
 .catalog-img img{
