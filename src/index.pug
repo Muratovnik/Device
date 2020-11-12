@@ -224,6 +224,35 @@ html(lang="en")
 
         include modules/_footer
 
+        section.write-us.visually-hidden
+            form(action="#" method="GET")
+                .name-and-email-wrap
+                    p.write-us-item
+                        label.write-us-label(for="name-and-family") Ваше имя
+                        input#name-and-family(type="text" placeholder="Имя Фамилия" name="name-and-family")
+                    p.write-us-item
+                        label.write-us-label(for="e-mail-input") Ваш e-mail
+                        input#e-mail-input(type="email" placeholder="E-mail" name="e-mail-input")
+                .write-us-letter
+                    label.write-us-label(for="write-us-textarea") Текст письма
+                    textarea#write-us-textarea.write-us-textarea(placeholder="В свободной форме" type="")
+                input.button(type="submit")
+            button.close-window
+                svg#Layer_1(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55px" height="55px" viewbox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve")
+                    path(fill="#F0C52E" d="M27.5,0C12.312,0,0,12.312,0,27.5C0,42.688,12.312,55,27.5,55C42.688,55,55,42.688,55,27.5\
+                    C55,12.312,42.688,0,27.5,0z M38.976,37.072l-1.486,1.426L27.5,28.924l-9.987,9.574l-1.488-1.426l9.988-9.573l-9.987-9.573\
+                    l1.487-1.425l9.987,9.573l9.988-9.573l1.487,1.425L28.986,27.5L38.976,37.072z")
+        
+        section.big-map.visually-hidden
+            button.close-window
+                svg#Layer_1(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55px" height="55px" viewbox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve")
+                    path(fill="#F0C52E" d="M27.5,0C12.312,0,0,12.312,0,27.5C0,42.688,12.312,55,27.5,55C42.688,55,55,42.688,55,27.5\
+                    C55,12.312,42.688,0,27.5,0z M38.976,37.072l-1.486,1.426L27.5,28.924l-9.987,9.574l-1.488-1.426l9.988-9.573l-9.987-9.573\
+                    l1.487-1.425l9.987,9.573l9.988-9.573l1.487,1.425L28.986,27.5L38.976,37.072z")
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1567.5649325148765!2d37.52836788321921!3d55.68695887356975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sro!4v1595572872455!5m2!1sru!2sro" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
+            img(src="img/MainContent/map-big.jpg" alt="Наш адрес: г.Москва, ул.Строителей, 15")
 
 
+
+        include modules/_scripts
 
