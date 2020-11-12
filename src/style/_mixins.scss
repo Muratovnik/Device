@@ -1,0 +1,12 @@
+@mixin font(
+        $family: sans-serif,
+        $size: 15px,
+        $lineh: 30px,
+        $font_w: 700,) {
+            font: {
+                family: $family;
+                size: $size;
+            }
+            line-height: $lineh;
+            font-weight: $font_w;
+}
