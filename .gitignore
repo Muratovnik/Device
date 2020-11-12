@@ -1,10 +1,7 @@
-﻿# Игнорирование папки источника
-sourse/
+﻿
 # Игнорирование отбракованных версий
 Trash/
-#
+
 Thumbs.db
-#
 .gitignore
-#
-.ssh/
+node_modules
