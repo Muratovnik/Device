@@ -78,47 +78,7 @@ a {
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes ButtonBG{
-    0% {
-        background-image: linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
-    }
-    20% {
-        background-image: linear-gradient(transparent 0%, transparent 35%,#f0c52e 35%, #f0c52e 65%, transparent 65%, transparent 100%);
-    }
-    40% {
-        background-image: linear-gradient(transparent 0%, transparent 30%,#f0c52e 30%, #f0c52e 70%, transparent 70%, transparent 100%);
-    }
-    60% {
-        background-image: linear-gradient(transparent 0%, transparent 20%,#f0c52e 20%, #f0c52e 80%, transparent 80%, transparent 100%);
-    }
-    80% {
-        background-image: linear-gradient(transparent 0%, transparent 10%,#f0c52e 10%, #f0c52e 90%, transparent 90%, transparent 100%);
-    }
-    100% {
-        background-image: linear-gradient(transparent 0%, transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent 100%);
-    }
-}
 
-@keyframes ButtonBG{
-    0% {
-        background-image: linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
-    }
-    20% {
-        background-image: linear-gradient(transparent 0%, transparent 35%,#f0c52e 35%, #f0c52e 65%, transparent 65%, transparent 100%);
-    }
-    40% {
-        background-image: linear-gradient(transparent 0%, transparent 30%,#f0c52e 30%, #f0c52e 70%, transparent 70%, transparent 100%);
-    }
-    60% {
-        background-image: linear-gradient(transparent 0%, transparent 20%,#f0c52e 20%, #f0c52e 80%, transparent 80%, transparent 100%);
-    }
-    80% {
-        background-image: linear-gradient(transparent 0%, transparent 10%,#f0c52e 10%, #f0c52e 90%, transparent 90%, transparent 100%);
-    }
-    100% {
-        background-image: linear-gradient(transparent 0%, transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent 100%);
-    }
-}
 
 
 
