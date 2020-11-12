@@ -5,3 +5,4 @@ Trash/
 Thumbs.db
 .gitignore
 node_modules
+dist/css
