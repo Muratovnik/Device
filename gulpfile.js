@@ -27,9 +27,7 @@ gulp.task("sass", function(param) {
       .pipe(cssmin())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('dist/css'))
-    	.pipe(browserSync.reload({
-			  stream: true
-		  }));
+    	.pipe(browserSync.stream({match: '**/*.css'}));
     param();
 });
 
@@ -53,7 +51,7 @@ gulp.task("scripts", function(param) {
     gulp.src("src/js/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
-  param();       
+  param();
 });
 
 //image
