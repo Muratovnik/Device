@@ -1,7 +1,7 @@
 @keyframes ButtonBG {
     @for $i from 0 to 5 {
       #{$i * 25%} {
-        background-image: linear-gradient(transparent 0%, transparent  #{40% - $i * 10%},#f0c52e #{40% - $i * 10%}, #f0c52e #{60% + $i * 10%}, transparent #{60% + $i * 10%}, transparent 100%);
+        background-image: linear-gradient(transparent 0%, transparent  #{40% - $i * 10%}, var(--yellow-color) #{40% - $i * 10%}, var(--yellow-color) #{60% + $i * 10%}, transparent #{60% + $i * 10%}, transparent 100%);
       }
     }
 }
