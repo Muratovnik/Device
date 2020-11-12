@@ -10,3 +10,8 @@
             line-height: $lineh;
             font-weight: $font_w;
 }
+
+@mixin df-sb {
+    display: flex;
+    justify-content: space-between;
+}
