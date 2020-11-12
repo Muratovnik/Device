@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     concat = require("gulp-concat"), //объединение файлов - конкатенация
     watch = require('gulp-watch'), //обновление файлов в режиме реального времени
     pug = require('gulp-pug'), //упрощенная верстка, переводит из Pug в HTML
+    // pugbem = require('gulp-pugbem'),
     prefixer = require('gulp-autoprefixer'), //добавляет кроссбраузерные префиксы
     imagemin = require('gulp-imagemin'), //оптимизация графики
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
@@ -12,13 +13,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'), //переименование файлов
     uglify = require('gulp-uglify'), //для сжатия JS
     browserSync = require("browser-sync"); //производит автообновление страницы
-
-
-//Создаем простой таск
-gulp.task('myFirstTask',function(param){
-	console.log('Привет, я твой первый такс');
-  param();
-});
 
 //Объединение, компиляция Sass в CSS, простановка венд. префиксов и дальнейшая минимизация кода
 gulp.task("sass", function(param) {
@@ -42,7 +36,10 @@ gulp.task("sass", function(param) {
 //pug
 gulp.task('pug', function(param){
 	return gulp.src('src/*.pug')
-		.pipe(pug({pretty: true}))
+    .pipe(pug({pretty: true}))
+    // .pipe(pug({
+    //   plugins: [pugbem]
+    // }))
 		.on('error', function(err)  {
 			console.log(err);
 			this.emit('end');
@@ -56,11 +53,7 @@ gulp.task('pug', function(param){
 
 //scripts
 gulp.task("scripts", function(param) {
-  gulp.src([
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/owl.carousel/dist/owl.carousel.min.js"])
-    .pipe(gulp.dest("dist/js"));
-  return gulp.src("src/js/*.js")
+    gulp.src("src/js/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
   param();       
@@ -68,7 +61,7 @@ gulp.task("scripts", function(param) {
 
 //image
 gulp.task('images', function (param) {
-  return gulp.src('src/images/**/*.{jpg,png,jpeg,svg}') 
+  return gulp.src('src/img/**/*.{jpg,png,jpeg,svg}') 
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({progressive: true}),
@@ -84,7 +77,7 @@ gulp.task('images', function (param) {
       ],{
         verbose: true
       }))
-    .pipe(gulp.dest('dist/images')) 
+    .pipe(gulp.dest('dist/img')) 
     .pipe(browserSync.reload({stream: true})); 
   param();
 });
@@ -114,4 +107,4 @@ gulp.task('watch', function(param){
 });
 
 //Это таск по умолчанию. Запускает одновременно все перечисленные в нем таски.
-gulp.task("default", gulp.series('watch', 'browser-sync', 'sass', 'pug', 'scripts', 'images'));
+gulp.task("default", gulp.series('watch', 'browser-sync', 'sass', 'pug', 'scripts'));
