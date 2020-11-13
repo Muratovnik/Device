@@ -116,20 +116,19 @@ html(lang="en")
                         a.popular__link(href='#')
                             .popular__img
                                 include img/svg/popular-6.svg
-                                        path(d='M63.794 44.438c-2.037.925-3.507 3.649-3.069 5.73.774 3.677 4.823 5.553 7.996 3.702 1.985-1.158 2.99-3.547 2.45-5.783-.568-2.39-2.734-4.138-5.158-4.138-.646 0-1.626.232-2.22.489zM36.092.154c-3.92.668-4.513 1.131-4.513 3.444 0 1.825.463 2.416 2.268 2.956 1.55.462 7.172.514 10.5.128 6.86-.822 11.321-2.544 9.698-3.752-1.265-.9-4.902-1.876-9.054-2.39-2.475-.308-7.996-.54-8.9-.386zM89.484.258C83.165.848 77.62 2.339 77.62 3.444c0 1.722 7.84 3.47 15.63 3.495 5.804 0 7.196-.642 7.196-3.34 0-1.825-.619-2.622-2.373-3.085C96.423.103 92.398 0 89.484.258zM112.776.283c-1.78.231-3.018.77-3.43 1.491-.387.77-.31 2.904.154 3.572.928 1.31 1.652 1.465 7.068 1.465 3.661 0 5.802-.129 7.867-.488 3.534-.592 6.603-1.517 7.248-2.237.49-.54.49-.54-.233-1.156-1.34-1.13-5.958-2.185-11.916-2.672-3.481-.283-4.488-.283-6.758.025z')
                             span.popular__link-text(href='#') Квадрокоптеры
 
         section.service
             .container
-                ul.service-list
-                    li.service-item
-                        button.button.service-checked Доставка
-                    li.service-item
+                ul.service__list
+                    li.service__item
+                        button.button.service__checked Доставка
+                    li.service__item
                         button.button Гарантия
-                    li.service-item
+                    li.service__item
                         button.button Кредит
-                ul.sevrice-description-list
-                    li.serv-descrtion-item.delivery-description
+                ul.sevrice__descriptions
+                    li.sevrice__description.-one
                         h2 Доставка
                         p
                             | Мы с удовольствием доставим ваш товар прямо к вашему
@@ -137,7 +136,7 @@ html(lang="en")
                             | подъезду совершенно бесплатно! Ведь мы неплохо
                             br
                             | заработаем, поднимая его на ваш этаж.
-                    li.serv-descrtion-item.warranty-description.hidden
+                    li.sevrice__description.-two.hidden
                         h2 Гарантия
                         p
                             | Если из-за возгорания купленного у нас товара у вас сгорит
@@ -145,7 +144,7 @@ html(lang="en")
                             | дом — не переживайте, мы выдадим вам новый.
                             br
                             | Товар, не дом, конечно же.
-                    li.serv-descrtion-item.credit-description.hidden
+                    li.sevrice__description.-three.hidden
                         h2 Кредит
                         p
                             | Залезть в долговую яму стало проще! Кредитные

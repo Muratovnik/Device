@@ -252,7 +252,6 @@
 
     .container {
         display: flex;
-        align-items: center;
         margin-bottom: 160px;
     }
 }
@@ -264,7 +263,7 @@
     border: none;
 }
 
-.service-list{
+.service__list{
     
     box-sizing: border-box;
     @include clean_ul;
@@ -276,7 +275,7 @@
     padding-top: 80px;
 }
 
-.service-item{
+.service__item{
     margin-bottom: 25px;
 
     .button{
@@ -306,7 +305,7 @@
 }
 
 
-.service-checked{
+.service__checked{
     display: block;
     padding: {
         top: 8px !important;
@@ -333,37 +332,37 @@
     }
 }
 
-.sevrice-description-list{
+.sevrice__descriptions{
     @include clean_ul;
 
-    margin-top: 15px;
+    padding-top: 85px;
     margin-left: 115px;
 }
 
-.serv-descrtion-item{
+.sevrice__description{
     width: 700px;
-    height: 200px;
+    min-height: 200px;
 
     background: {
         size: initial;
         repeat: no-repeat;
-        position: center right;
+        position: top right;
     };
 
     p {
         margin: 0;
     }
-}
-.delivery-description{
-    background-image: url(../img/MainContent/Services/delivery.svg);
-}
-.warranty-description{
-    background-image: url(../img/MainContent/Services/warranty.svg);
-}
-.credit-description{
-    background-image: url(../img/MainContent/Services/credit.svg);
-}
 
+    &--one {
+        background-image: url(../img/MainContent/Services/delivery.svg);
+    }
+    &--two {
+        background-image: url(../img/MainContent/Services/warranty.svg);
+    }
+    &--three {
+        background-image: url(../img/MainContent/Services/credit.svg);
+    }
+}
 /* ---------------------
     end Service section
 --------------------- */
