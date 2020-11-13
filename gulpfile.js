@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     concat = require("gulp-concat"), //объединение файлов - конкатенация
     watch = require('gulp-watch'), //обновление файлов в режиме реального времени
     pug = require('gulp-pug'), //упрощенная верстка, переводит из Pug в HTML
-    // pugbem = require('gulp-pugbem'),
+    pugbem = require('gulp-pugbem'),
     prefixer = require('gulp-autoprefixer'), //добавляет кроссбраузерные префиксы
     imagemin = require('gulp-imagemin'), //оптимизация графики
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
@@ -35,11 +35,15 @@ gulp.task("sass", function(param) {
 //pug
 gulp.task('pug', function(param){
 	return gulp.src('src/*.pug')
-    .pipe(pug({pretty: true}))
+    .pipe(pug({
+        pretty: true,
+        plugins: [pugbem]
+      }))
 		.on('error', function(err)  {
 			console.log(err);
 			this.emit('end');
-		})
+    })
+    
 		.pipe(gulp.dest("dist"))
 		.pipe(browserSync.reload({
 			stream: true
