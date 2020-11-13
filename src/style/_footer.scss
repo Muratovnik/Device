@@ -13,7 +13,7 @@
 }
 
 .main-footer {
-    .user-link {
+    .user-links__link {
         color: #ffffff;
         opacity: .7;
 
@@ -24,6 +24,13 @@
 
         &:active {
             opacity: var(--_3_opacity);
+        }
+
+        svg {
+            fill: #ffc600;
+            path {
+                fill: #ffc600;
+            }
         }
     }
 
@@ -36,22 +43,16 @@
         color: #ffffff;
         opacity: .3;
     }
-
-    .user-link {
-        svg {
-            fill: #ffc600;
-        }
-    }
 }
 
-.footer-user-navigation{
+.main-footer__user-nav{
     @include df-sb;
 
     align-items: center;
     margin-bottom: 40px;
 }
 
-.footer-logo{
+.main-footer__logo{
     display: block;
     height: 36px;
     width: 164px;
@@ -69,43 +70,34 @@
     }
 }
 
-.footer-navigation-list{
-    @include clean_ul;
-    display: flex;
-}
-
-.footer-navigation-item{
-    margin-right: 44px;
-
-    &:last-child{
-        margin-right: 0;
-    }
-}
 
 
 
-
-.contacts-and-navigation{
+.main-footer__info-nav{
     @include df-sb;
     align-items: center;
     margin-bottom: 65px;
 
     p {
         margin: 0;
+        white-space: nowrap;
+    }
+    a {
+        color: inherit;
     }
 }
 
-.footer-address{
+.main-footer__address{
     width: 215px;
 }
 
-.footer-main-nav{
+.main-footer__list{
     @include clean_ul;
     @include df-sb;
     width: 440px;
 }
 
-.footer-main-nav-item {
+.main-footer__item {
     a {
         color: #ffffff;
         font-family: $font_gilroy;
@@ -127,27 +119,28 @@
 
 
 
-.social-and-authros{
+.main-footer__social-and-authors{
     @include df-sb;
     align-items: center;
 }
 
 
-.decorate-block{
+.main-footer__decorate-block{
     width: 80px;
     height: 7px;
+    margin-right: 45px;
     background-color: #ffc600;
 }
 
 
-.footer-social{
+.social{
     @include clean_ul;
     @include df-sb;
 
     width: 141px;
 }
 
-.social-item {
+.social__item {
     a {
         opacity: var(--_3_opacity);
 
@@ -161,9 +154,17 @@
     }
 }
 
-.HTML-logo{
+.main-footer__autors-wrap {
+    display: flex;
+    align-items: center;
+
+    height: auto;
+}
+
+.main-footer__author-link{
     display: block;
     width: max-content;
+    margin-right: 10px;
 
     &:hover,
     &:focus {
@@ -171,6 +172,17 @@
     }
     &:active {
         opacity: var(--_3_opacity);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    svg {
+        fill: #ffc600;
+        path {
+            fill: #ffc600;
+        }
     }
 }
 
