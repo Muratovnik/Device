@@ -1,4 +1,4 @@
-/* header css */
+/* Header */
 
 .main-header {
     position: relative;
@@ -351,15 +351,20 @@
     }
 }
 
+.header-catalog-item {
+    &:hover {
+        opacity: var(--_6_opacity);
+    }
+    &:active {
+        opacity: var(--_3_opacity);
+    }
+    a {
+        &:focus {
+            opacity: var(--_6_opacity);
+        }
+    }
+}
 .header-catalog-item:nth-child(5) {
     margin-bottom: 5px;
 }
-.header-catalog-item:hover,
-.header-catalog-item a:focus{
-    opacity: .6;
-}
-.header-catalog-item:active{
-    opacity: .3;
-}
-
-/* /header css */
+/* End Header */
