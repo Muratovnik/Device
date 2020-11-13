@@ -565,3 +565,206 @@
 /* ---------------------
    end Contacts section
 --------------------- */
+
+
+/* ---------------------
+   Write us popup
+--------------------- */
+.write-us{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -300px;
+    padding: 100px;
+
+    width: 960px;
+    height: auto;
+
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+    z-index: 3;
+
+    .button{
+        display: block;
+        width: max-content;
+    
+        color: rgba(0, 0, 0, 1);
+    
+        @include font(18px, 24px);
+    
+        padding: 9px 44px;
+    
+        background-image: linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
+        background-color: transparent;    
+    
+        outline: none;
+        border: none;
+
+        &:hover,
+        &:focus {
+            background-color: transparent; 
+        }
+    }
+    
+}
+
+
+.name-and-email-wrap{
+    @include df-sb;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
+.write-us-item{
+    margin: 0;
+}
+
+.write-us-letter{
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.write-us-label{
+    display: block;
+    margin-bottom: 10px;
+
+    color: rgba(70, 70, 70, 1);
+    @include font(18px, 24px);
+    font-family: $font_gilroy;
+    
+    pointer-events: none;
+}
+
+.write-us input,
+.write-us-textarea{
+    width: 360px;
+    height: auto;
+    border: none;
+
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(70, 70, 70, .4);
+	
+    background-color: rgba(229, 229, 229, .5);
+
+    padding: {
+        top: 18px;
+        right: 21px;
+        bottom: 18px;
+        left: 21px;
+    }
+    outline: none;
+
+    &:hover {
+        background-color: rgba(229, 229, 229, .8);
+    }
+    &:focus {
+        padding: {
+            top: 15px;
+            right: 18px;
+            bottom: 15px;
+            left: 15px;
+        };
+        border: 3px solid #f7e296;
+        color: rgba(70, 70, 70, 1);
+        background-color: transparent;
+    }
+}
+
+.write-us-textarea{
+    display: block;
+
+    width: 100% !important;
+    min-height: 155px;
+    max-height: 155px;
+    overflow: auto;
+}
+
+.invaild-property{
+    background-color: rgba(237,181,181, .5) !important;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(237,181,181, 1) !important;
+        border: none !important;
+        padding: 18px 21px 18px 21px !important;
+    }
+}
+
+
+.close-window{
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+    opacity: .5;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:active {
+        opacity: .3;
+    }
+}
+
+/* ---------------------
+   end Write us popup
+--------------------- */
+
+
+/* ---------------------
+        Map popup
+--------------------- */
+
+.big-map{
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -280px;
+
+    width: 960px;
+    height: 560px;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.1);
+    z-index: 3;
+
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+    
+        z-index: -1;
+    }
+}
+
+.js-modal-animation{
+    animation: {
+        name: bounce;
+        duration: .5s;
+    };
+}
+
+/* ---------------------
+    end Map popup
+--------------------- */
