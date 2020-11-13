@@ -19,7 +19,8 @@ body {
     margin: 0;
     padding-top: 40px;
 
-    @include font($font_open-sans);
+    @include font;
+    font-family: $font_open-sans;
     color: #595959;
 }
 
@@ -59,7 +60,8 @@ a {
     padding: 9px 44px;
 
     color: var(--text-color);
-    @include font($font_gilroy, 18px, 24px);
+    @include font(18px, 24px);
+    font-family: $font_gilroy;
     text-transform: uppercase;
 
     background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent),color-stop(40%, var(--yellow-color)), color-stop(60%, var(--yellow-color)), color-stop(60%, transparent), to(transparent));
@@ -85,12 +87,14 @@ h2{
     margin-bottom: 30px;
 
     color: var(--text-color);
-    @include font($font_gilroy, 47px, 30px);
+    @include font(47px, 30px);
+    font-family: $font_gilroy;
 }
 
 .headline3{
     color: var(--text-color);
-    @include font($font_gilroy, 18px, 24px);
+    @include font(18px, 24px);
+    font-family: $font_gilroy;
     text-transform: uppercase;
     letter-spacing: 3.5px;
 }
@@ -98,7 +102,8 @@ h2{
 
 title{
     color: #595959;
-    @include font($font_open-sans, 16px, 24px);
+    @include font(16px, 24px);
+    font-family: $font_open-sans;
     
     border: none;
     background-color: #e2e2e2;

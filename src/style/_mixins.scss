@@ -1,12 +1,8 @@
 @mixin font(
-        $family: sans-serif,
         $size: 15px,
         $lineh: 30px,
         $font_w: 700,) {
-            font: {
-                family: $family;
-                size: $size;
-            }
+            font-size: $size;
             line-height: $lineh;
             font-weight: $font_w;
 }
@@ -14,4 +10,10 @@
 @mixin df-sb {
     display: flex;
     justify-content: space-between;
+}
+
+@mixin clean_ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
