@@ -429,48 +429,30 @@
     margin-bottom: 150px;
 }
 
-
 .logotypes-list{
-
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    
-
-    
-
+    @include clean_ul;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
 }
 
-.logotypes-item img{
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    opacity: .2;
+.logotypes-item {
+    img {
+        filter: grayscale(100%);
+        opacity: .2;
+    }
+    
+    &:hover,
+    &:focus {
+            img {
+                filter: none;
+                opacity: 1;
+            }
+    }
 }
-
-.logotypes-item:hover img,
-.logotypes-item:focus img{
-    -webkit-filter: none;
-            filter: none;
-    opacity: 1;
-}
-
-
-
-
 
 
 .information{
-    
-    
-    display: flex;
-    
-        
-            justify-content: space-between;
-
+    @include df-sb;
     margin-bottom: 80px;
 }
 
