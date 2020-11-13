@@ -396,11 +396,6 @@
     }
 }
 
-.information{
-    @include df-sb;
-    margin-bottom: 80px;
-}
-
 /* ---------------------
    end Logotypes section
 --------------------- */
@@ -409,6 +404,10 @@
    About us section
 --------------------- */
 
+.about-company{
+    @include df-sb;
+    margin-bottom: 80px;
+}
 
 .about-us{
     width: 500px;
@@ -423,23 +422,22 @@
     }
 
     .button {
-        width: 260px;
         padding: 10px 21px;
     }
 }
 
-.about-transport{
+.about-us__transport-list{
     @include clean_ul;
 
     padding-left: 35px;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
 
     color: var(--text-color);
     font-family: "Gilroy Extra Bold", Arial, Helvetica, sans-serif;
     @include font(16px, 40px);    
 }
 
-.about-transort-item{
+.about-us__transport-item{
     position: relative;
 
     &::after {
@@ -457,7 +455,7 @@
     }
 }
 
-.headline-decoration {
+.about-company__title {
     position: relative;
 
     &::after {
@@ -491,7 +489,7 @@
     }
 }
 
-.map_link {
+.contacts__map-link {
     display: block;
     height: 222px;
     width: auto;
