@@ -5,3 +5,24 @@
       }
     }
 }
+
+@keyframes ButtonBG-black{
+  0% {
+      background-image: linear-gradient(transparent 0%, transparent 40%,var(--yellow-color) 40%, var(--yellow-color) 60%, transparent 60%, transparent 100%);
+  }
+  20% {
+      background-image: linear-gradient(transparent 0%, transparent 35%,#c4a63e 35%, #c4a63e 65%, transparent 65%, transparent 100%);
+  }
+  40% {
+      background-image: linear-gradient(transparent 0%, transparent 30%,#a18a38 30%, #a18a38 70%, transparent 70%, transparent 100%);
+  }
+  60% {
+      background-image: linear-gradient(transparent 0%, transparent 20%,#88783f 20%, #88783f 80%, transparent 80%, transparent 100%);
+  }
+  80% {
+      background-image: linear-gradient(transparent 0%, transparent 10%,#6a603d 10%, #6a603d 90%, transparent 90%, transparent 100%);
+  }
+  100% {
+      background-image: linear-gradient(transparent 0%, transparent 0%,var(--text-color) 0%, var(--text-color) 100%, transparent 100%, transparent 100%);
+  }
+}
