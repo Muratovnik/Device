@@ -290,6 +290,14 @@
     @include font(18px, 24px);
 }
 
+/* ---------------------
+    end Popular goods
+--------------------- */
+
+/* ---------------------
+    Service section
+--------------------- */
+
 .service{
     position: relative;
 
@@ -422,8 +430,13 @@
     background-image: url(../img/MainContent/Services/credit.svg);
 }
 
+/* ---------------------
+    end Service section
+--------------------- */
 
-
+/* ---------------------
+    Logotypes section
+--------------------- */
 
 .logotypes{
     margin-bottom: 150px;
@@ -450,87 +463,90 @@
     }
 }
 
-
 .information{
     @include df-sb;
     margin-bottom: 80px;
 }
 
+/* ---------------------
+   end Logotypes section
+--------------------- */
 
+/* ---------------------
+   About us section
+--------------------- */
 
 
 .about-us{
     width: 500px;
-}
-.about-us p{
-    margin: 0;
-    margin-bottom: 35px;
-}
-.about-us p:nth-child(3){
-    margin-bottom: 64px;
+
+    p {
+        margin: 0;
+        margin-bottom: 35px;
+
+        &:nth-child(3) {
+            margin-bottom: 64px;
+        }
+    }
+
+    .button {
+        width: 260px;
+        padding: 10px 21px;
+    }
 }
 
 .about-transport{
-    list-style: none;
-    padding: 0;
+    @include clean_ul;
+
     padding-left: 35px;
-    margin: 0;
-
-    font-family: "Gilroy Extra Bold", Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    color: var(--text-color);
-
-    font-size: 16px;
-    line-height: 40px;
-
     margin-bottom: 65px;
+
+    color: var(--text-color);
+    font-family: "Gilroy Extra Bold", Arial, Helvetica, sans-serif;
+    @include font(16px, 40px);    
 }
 
 .about-transort-item{
     position: relative;
+
+    &::after {
+        position: absolute;
+    
+        content: "";
+        top: 15px;
+        left: -35px;
+    
+        width: 8px;
+        height: 8px;
+    
+        border: #e5e5e5 2px solid;
+        border-radius: 4px;
 }
 
-
-.about-transort-item::after{
-    position: absolute;
-
-    content: "";
-    top: 15px;
-    left: -35px;
-
-    width: 8px;
-    height: 8px;
-
-    border: #e5e5e5 2px solid;
-    border-radius: 4px;
-}
-
-.about-us .button{
-    width: 260px;
-    padding: 10px 21px;
-}
-
-.headline-decoration{
+.headline-decoration {
     position: relative;
+
+    &::after {
+        position: absolute;
+    
+        content: "";
+        top: -50px;
+        left: 0;
+    
+        width: 80px;
+        height: 7px;
+    
+        background-color: var(--text-color);
+    }
 }
 
-.headline-decoration::after{
-    position: absolute;
+/* ---------------------
+   end About us section
+--------------------- */
 
-    content: "";
-    top: -50px;
-    left: 0;
-
-    width: 80px;
-    height: 7px;
-
-    background-color: var(--text-color);
-}
-
-
-
-
-
+/* ---------------------
+   Contacts section
+--------------------- */
 
 .contacts{
     width: 560px;
