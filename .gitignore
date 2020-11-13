@@ -6,3 +6,4 @@ Thumbs.db
 .gitignore
 node_modules
 dist/css
+copy/

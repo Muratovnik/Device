@@ -11,8 +11,9 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cssmin = require('gulp-cssmin'), //мифинификация css
     rename = require('gulp-rename'), //переименование файлов
-    uglify = require('gulp-uglify'), //для сжатия JS
-    browserSync = require("browser-sync"); //производит автообновление страницы
+    uglify = require('gulp-uglify'); //для сжатия JS
+    
+var browserSync = require('browser-sync').create(); //производит автообновление страницы
 
 //Объединение, компиляция Sass в CSS, простановка венд. префиксов и дальнейшая минимизация кода
 gulp.task("sass", function(param) {
@@ -23,11 +24,11 @@ gulp.task("sass", function(param) {
         ['last 2 versions'],
         {cascade: false}
       ))
-    	.pipe(gulp.dest("dist/css"))
+      .pipe(gulp.dest("dist/css"))
+      .pipe(browserSync.stream())
       .pipe(cssmin())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('dist/css'))
-    	.pipe(browserSync.stream({match: '**/*.css'}));
     param();
 });
 
@@ -79,15 +80,17 @@ gulp.task('images', function (param) {
 
 //Автообновление страницы
 gulp.task('browser-sync', function (param) {
-  var files = [
-    'dist/index.html',
-    'dist/css/*.css',
-    'dist/js/*.js'
-  ];  
+    var files = [
+      '*.html',
+      'css/**/*.css',
+      'js/**/*.js',
+      'src/**/*.scss'
+  ];
+
   browserSync.init(files, {
-    server: {
-      baseDir: 'dist'
-    }
+      server: {
+        baseDir: 'dist/'
+      }
   });
   param();
 });
