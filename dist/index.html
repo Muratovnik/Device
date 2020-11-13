@@ -15,38 +15,38 @@
   </head>
   <body>
     <div class="container">
-      <header class="main-header"><a class="header-logo" href=""><img width="164" height="36" src="img/Header/logo.svg" alt="Логотип Device"/></a>
-        <section class="user-navigation">
-          <form class="search-form header-coloumn" action="#" method="GET">
+      <header class="main-header"><a class="main-header__logo" href=""><img width="164" height="36" src="img/Header/logo.svg" alt="Логотип Device"/></a>
+        <section class="main-header__user-nav">
+          <form class="search-form main-header__coloumn" action="#" method="GET">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
-            <input class="search-field" id="search-field" name="search-field" type="search" placeholder="Поиск по сайту"/>
-            <button class="form-button" type="submit">Найти</button>
+            <input class="search-form__field" id="search-field" name="search-field" type="search" placeholder="Поиск по сайту"/>
+            <button class="search-form__btn" type="submit">Найти</button>
           </form>
-          <nav class="user-links header-coloumn">
-            <div class="login-wrap"><a class="user-link" href="catalog.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Войти</a><a class="visually-hidden logout" href="#">Выйти</a></div><a class="user-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a><a class="user-link" href="">
+          <nav class="user-links main-header__coloumn">
+            <div class="user-links__login-wrap"><a class="user-links__link" href="catalog.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Войти</a><a class="visually-hidden user-links__logout" href="#">Выйти</a></div><a class="user-links__link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a><a class="user-links__link" href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a>
           </nav>
         </section>
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li class="main-nav-item header-coloumn"><a class="main-nav-link catalog-link" href="catalog.html">Каталог товаров</a>
-              <section class="header-catalog-navigation">
-                <ul class="header-catalog-list">
-                  <li class="header-catalog-item"><a href="">Виртуальная реальность</a></li>
-                  <li class="header-catalog-item"><a href="">Моноподы для селфи</a></li>
-                  <li class="header-catalog-item"><a href="">Экшн-камеры</a></li>
-                  <li class="header-catalog-item"><a href="">Фитнес-браслеты</a></li>
-                  <li class="header-catalog-item"><a href="">Умные часы</a></li>
-                  <li class="header-catalog-item"><a href="">Квадрокоптеры</a></li>
+        <nav class="main-nav main-header__nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-header__coloumn"><a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
+              <section class="main-nav__inner-wrap" id="inner-menu">
+                <ul class="main-nav__inner-list">
+                  <li class="main-nav__inner-item"><a href="">Виртуальная реальность</a></li>
+                  <li class="main-nav__inner-item"><a href="">Моноподы для селфи</a></li>
+                  <li class="main-nav__inner-item"><a href="">Экшн-камеры</a></li>
+                  <li class="main-nav__inner-item"><a href="">Фитнес-браслеты</a></li>
+                  <li class="main-nav__inner-item"><a href="">Умные часы</a></li>
+                  <li class="main-nav__inner-item"><a href="">Квадрокоптеры</a></li>
                 </ul>
               </section>
             </li>
-            <ul class="main-nav-item-list header-coloumn">
-              <li class="main-nav-item"><a class="main-nav-link" href="contacts.html">Доставка</a></li>
-              <li class="main-nav-item"><a class="main-nav-link" href="delivery.html">Гарантия</a></li>
-              <li class="main-nav-item"><a class="main-nav-link" href="garant.html">Контакты</a></li>
+            <ul class="main-nav__items-list main-header__coloumn">
+              <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Доставка</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="delivery.html">Гарантия</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="garant.html">Контакты</a></li>
             </ul>
           </ul>
         </nav>
@@ -344,5 +344,6 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1567.5649325148765!2d37.52836788321921!3d55.68695887356975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sro!4v1595572872455!5m2!1sru!2sro" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><img src="img/MainContent/map-big.jpg" alt="Наш адрес: г.Москва, ул.Строителей, 15"/>
     </section>
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

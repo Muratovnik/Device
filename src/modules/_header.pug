@@ -1,53 +1,53 @@
 .container
     header.main-header
-        a.header-logo(href='')
+        a.main-header__logo(href='')
             img(width='164' height='36' src='img/Header/logo.svg' alt='Логотип Device')
-        section.user-navigation
-            form.search-form.header-coloumn(action='#' method='GET')
+        section.main-header__user-nav
+            form.search-form.main-header__coloumn(action='#' method='GET')
                 label.visually-hidden(for='search-field') Поиск по сайту
                 include ../img/svg/search.svg
-                input#search-field.search-field(name='search-field' type='search' placeholder='Поиск по сайту')
-                button.form-button(type='submit') Найти
-            nav.user-links.header-coloumn
-                .login-wrap
-                    a.user-link(href='catalog.html')
+                input#search-field.search-form__field(name='search-field' type='search' placeholder='Поиск по сайту')
+                button.search-form__btn(type='submit') Найти
+            nav.user-links.main-header__coloumn
+                .user-links__login-wrap
+                    a.user-links__link(href='catalog.html')
                         include ../img/svg/user.svg
                         | Войти
-                    a.visually-hidden.logout(href='#') Выйти
-                a.user-link(href='#')
+                    a.visually-hidden.user-links__logout(href='#') Выйти
+                a.user-links__link(href='#')
                     include ../img/svg/compare.svg 
                     | Сравнить
-                a.user-link(href='')
+                a.user-links__link(href='')
                     include ../img/svg/cart.svg
                     | Корзина
-        nav.main-nav
-            ul.main-nav-list
-                li.main-nav-item.header-coloumn
-                    a.main-nav-link.catalog-link(href='catalog.html') Каталог товаров
-                    section.header-catalog-navigation
-                        ul.header-catalog-list
-                            li.header-catalog-item
+        nav.main-nav.main-header__nav
+            ul.main-nav__list
+                li.main-nav__item.main-header__coloumn
+                    a.main-nav__link.main-nav__link--catalog(href='catalog.html') Каталог товаров
+                    section.main-nav__inner-wrap#inner-menu
+                        ul.main-nav__inner-list
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Виртуальная реальность
-                            li.header-catalog-item
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Моноподы для селфи
-                            li.header-catalog-item
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Экшн-камеры
-                            li.header-catalog-item
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Фитнес-браслеты
-                            li.header-catalog-item
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Умные часы
-                            li.header-catalog-item
+                            li.main-nav__inner-item
                                 a(href='')
                                     | Квадрокоптеры
-                ul.main-nav-item-list.header-coloumn
-                    li.main-nav-item
-                        a.main-nav-link(href='contacts.html') Доставка
-                    li.main-nav-item
-                        a.main-nav-link(href='delivery.html') Гарантия
-                    li.main-nav-item
-                        a.main-nav-link(href='garant.html') Контакты
+                ul.main-nav__items-list.main-header__coloumn
+                    li.main-nav__item
+                        a.main-nav__link(href='contacts.html') Доставка
+                    li.main-nav__item
+                        a.main-nav__link(href='delivery.html') Гарантия
+                    li.main-nav__item
+                        a.main-nav__link(href='garant.html') Контакты
