@@ -375,13 +375,13 @@
     margin-bottom: 150px;
 }
 
-.logotypes-list{
+.logotypes__list{
     @include clean_ul;
     display: flex;
     justify-content: space-around;
 }
 
-.logotypes-item {
+.logotypes__item {
     img {
         filter: grayscale(100%);
         opacity: .2;
