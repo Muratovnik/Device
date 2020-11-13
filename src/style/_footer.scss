@@ -1,0 +1,180 @@
+/* ---------------------
+        Footer
+--------------------- */
+
+.main-footer{
+    background-color: #464646;
+    color: #ffffff;
+    font-weight: 300;
+
+    .container{
+        padding: 65px 0;
+    }
+}
+
+.main-footer {
+    .user-link {
+        color: #ffffff;
+        opacity: .7;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: var(--_3_opacity);
+        }
+    }
+
+    .login-user {
+        color: #ffffff;
+        opacity: .7 !important;
+    }
+
+    .logout-user{
+        color: #ffffff;
+        opacity: .3;
+    }
+
+    .user-link {
+        svg {
+            fill: #ffc600;
+        }
+    }
+}
+
+.footer-user-navigation{
+    @include df-sb;
+
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo{
+    display: block;
+    height: 36px;
+    width: 164px;
+    
+    svg {
+        fill: #ffc600;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: var(--_6_opacity);
+    }
+    &:active{
+        opacity: var(--_3_opacity);
+    }
+}
+
+.footer-navigation-list{
+    @include clean_ul;
+    display: flex;
+}
+
+.footer-navigation-item{
+    margin-right: 44px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+
+
+
+.contacts-and-navigation{
+    @include df-sb;
+    align-items: center;
+    margin-bottom: 65px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.footer-address{
+    width: 215px;
+}
+
+.footer-main-nav{
+    @include clean_ul;
+    @include df-sb;
+    width: 440px;
+}
+
+.footer-main-nav-item {
+    a {
+        color: #ffffff;
+        font-family: $font_gilroy;
+        text-transform: uppercase;
+        letter-spacing: 3.5px;
+
+        @include font(18px, 24px);
+        outline: none;
+
+        &:hover,
+        &:focus {
+            opacity: var(--_6_opacity);
+        }
+        &:active {
+            opacity: var(--_3_opacity);
+        }
+    }
+}
+
+
+
+.social-and-authros{
+    @include df-sb;
+    align-items: center;
+}
+
+
+.decorate-block{
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+}
+
+
+.footer-social{
+    @include clean_ul;
+    @include df-sb;
+
+    width: 141px;
+}
+
+.social-item {
+    a {
+        opacity: var(--_3_opacity);
+
+        &:hover,
+        &:focus {
+            opacity: var(--_6_opacity);
+        }
+        &:active {
+            opacity: .1;
+        }
+    }
+}
+
+.HTML-logo{
+    display: block;
+    width: max-content;
+
+    &:hover,
+    &:focus {
+        opacity: var(--_6_opacity);
+    }
+    &:active {
+        opacity: var(--_3_opacity);
+    }
+}
+
+
+/* ---------------------
+        end Footer
+--------------------- */
