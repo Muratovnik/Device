@@ -1,6 +1,8 @@
 /* Index pgae styles */
 
-/* Слайдер с товарами. Сделан абсолютом по отошению к heade'у*/
+/* ---------------------
+        Slider 
+--------------------- */
 
 .goods-slider{
     position: absolute;
@@ -144,13 +146,6 @@
 }
 
 
-/*
------------------------------------------------------
-
-                We stopped there
-
------------------------------------------------------
-*/
 
 .slider-control{
     position: absolute;
@@ -159,23 +154,13 @@
     right: 5%;
     top: 70%;
 
+    @include df-sb;
     width: 80px;
-
-    
-
-    
-
-    display: flex;
-    
-        
-            justify-content: space-between;
 }
 
 .slider-switch{
-    
-    
-    width: max-content;
     position: relative;
+    width: max-content;
 }
 
 
@@ -189,9 +174,11 @@
     width: 12px;
     height: 12px;
 
-    background-image: url(/img/MainContent/Sliders/slider-button-empty.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: {
+        image: url(/img/MainContent/Sliders/slider-button-empty.svg);
+        size: cover;
+        repeat: no-repeat;
+    };
 }
 
 
@@ -219,6 +206,9 @@
     display: none;
 }
 
+/* ---------------------
+        end Slider 
+--------------------- */
 
 
 
@@ -232,84 +222,52 @@
 
 
 
-
-
-
-
+/* ---------------------
+    Popular goods
+--------------------- */
 
 .popular{
-    margin-bottom: 80px;
     position: relative;
+    margin: {
+        bottom: 80px;
+    };
+    
 }
 
 
 .popular-list{
-    list-style: none;
-
-    margin: 0;
-    padding: 0;
-
-    display: -ms-grid;
-
-    display: grid;
-    -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
-    -ms-grid-columns: 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr;
-    grid-template-columns: repeat(6, 1fr);
-
-    grid-gap: 0px;
-
+    @include clean_ul;
+    
     width: 100%;
-}
-
-
-.popular-list > *:nth-child(1){
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-}
-
-
-.popular-list > *:nth-child(2){
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-}
-
-
-.popular-list > *:nth-child(3){
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-}
-
-
-.popular-list > *:nth-child(4){
-    -ms-grid-row: 1;
-    -ms-grid-column: 7;
-}
-
-
-.popular-list > *:nth-child(5){
-    -ms-grid-row: 1;
-    -ms-grid-column: 9;
-}
-
-
-.popular-list > *:nth-child(6){
-    -ms-grid-row: 1;
-    -ms-grid-column: 11;
+    display: grid;
+    
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .popular-item{
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+    width: max-content;
 }
 
 .popular-block{
     outline: none;
+
+    &:focus {
+        .popular-img {
+            background-color: var(--yellow-color);
+        }
+    }
+    &:active {
+        .popular-img {
+            background-color: var(--yellow-color);
+        }
+        .popular-img svg,
+        .popular-text {
+            opacity: var(--_3_opacity);
+        }
+    }
 }
 
 .popular-img{
-    display: -ms-grid;
     display: grid;
     place-items: center;
 
@@ -318,78 +276,44 @@
     background-color: #f7e296;
 
     margin-bottom: 35px;
+
+    &:hover {
+        background-color: var(--yellow-color);
+    }
 }
-
-.popular-block:focus .popular-img{
-    background-color: #f0c52e;
-}
-
-.popular-img:hover{
-    background-color: #f0c52e;
-}
-
-.popular-block:active .popular-img{
-    background-color: #f0c52e;
-}
-
-.popular-block:active .popular-img svg,
-.popular-block:active .popular-text{
-    opacity: .3;
-}
-
-
 
 .popular-text{
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-
-    font-family: $font_gilroy;
-    color: var(--text-color);
-
     margin: 0;
+
+    color: var(--text-color);
+    font-family: $font_gilroy;
+    @include font(18px, 24px);
 }
 
 .service{
     position: relative;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 100px;
+
+        content: "";
+
+        height: 290px;
+        width: 100%;
+
+        background-color: #e5e5e5;
+    
+        z-index: -1;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 160px;
+    }
 }
-
-.service::after{
-    height: 290px;
-
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-
-    left: 0;
-    top: 100px;
-
-    background-color: #e5e5e5;
-
-    z-index: -1;
-}
-
-
-.service .container{
-
-    
-
-    
-
-    display: flex;
-    
-    
-    
-        
-    
-            align-items: center;
-
-    margin-bottom: 160px;
-
-}
-
 
 
 .sevrice-form{
@@ -400,10 +324,8 @@
 
 .service-list{
     
-            box-sizing: border-box;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    @include clean_ul;
 
     height: 320px;
     width: 285px;
@@ -414,149 +336,63 @@
 
 .service-item{
     margin-bottom: 25px;
-}
 
+    .button{
+        width: 160px;
+        padding: 8px 0;
+        text-align: center;
 
-.service-item .button{
-    width: 160px;
-    padding: 8px 0;
+        &:active {
+            width: 280px !important;
+            padding: {
+                top: 8px;
+                right: 118px;
+                bottom: 8px;
+                left: 0px;
+            }
+            color:#f7e184;
 
-    text-align: center;
-}
+            background-image: linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
 
-.service-item .button:active{
-    padding: 8px 118px 8px 0px;
-
-    color:rgba(247,225,132, 1);
-
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--text-color)), to(var(--text-color)));
-
-    background-image: -o-linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
-
-    background-image: linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
-
-    -webkit-animation-name: ButtonBG-black;
-
-            animation-name: ButtonBG-black;
-    -webkit-animation-duration: 100ms;
-            animation-duration: 100ms;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-
-    width: 278px !important;
+            animation: {
+                name: ButtonBG-black;
+                duration: 100ms;
+                fill-mode: both;
+            }
+        }
+    }    
 }
 
 
 .service-checked{
     display: block;
-    padding: 8px 118px 8px 0px !important;
+    padding: {
+        top: 8px !important;
+        right: 118px !important;
+        bottom: 8px !important;
+        left: 0px !important;
+    };
 
     color:rgba(247,225,132, 1);
 
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--text-color)), to(var(--text-color)));
-
-    background-image: -o-linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
-
     background-image: linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
 
-    width: 278px !important;
-}
+    width: 280px !important;
 
-.service-checked:hover,
-.service-checked:focus{
-    color:rgba(247,225,132,0.6);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--text-color)), to(var(--text-color)));
-    background-image: -o-linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
-    background-image: linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
-    -webkit-animation: none;
-            animation: none;
-}   
-
-.service-checked:active{
-    color:rgba(247,225,132,0.3);
-
-    -webkit-animation: none !important;
-
-            animation: none !important;
-}
-
-
-
-
-
-@-webkit-keyframes ButtonBG-black{
-    0% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent),color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
+    &:hover,
+    &:focus {
+        color:rgba(247,225,132,0.6);
+        background-image: linear-gradient(var(--text-color) 0%, var(--text-color) 100%);
+        animation: none;
     }
-    20% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, transparent),color-stop(35%, #c4a63e), color-stop(65%, #c4a63e), color-stop(65%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 35%,#c4a63e 35%, #c4a63e 65%, transparent 65%, transparent 100%);
-    }
-    40% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, transparent),color-stop(30%, #a18a38), color-stop(70%, #a18a38), color-stop(70%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 30%,#a18a38 30%, #a18a38 70%, transparent 70%, transparent 100%);
-    }
-    60% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent),color-stop(20%, #88783f), color-stop(80%, #88783f), color-stop(80%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 20%,#88783f 20%, #88783f 80%, transparent 80%, transparent 100%);
-    }
-    80% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, transparent),color-stop(10%, #6a603d), color-stop(90%, #6a603d), color-stop(90%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 10%,#6a603d 10%, #6a603d 90%, transparent 90%, transparent 100%);
-    }
-    100% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent),color-stop(0%, var(--text-color)), color-stop(100%, var(--text-color)), color-stop(100%, transparent), to(transparent));
-        background-image: linear-gradient(transparent 0%, transparent 0%,var(--text-color) 0%, var(--text-color) 100%, transparent 100%, transparent 100%);
+    &:active {
+        color:rgba(247,225,132,0.3);
+        animation: none !important;
     }
 }
-
-
-
-
-
-@keyframes ButtonBG-black{
-    0% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent),color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
-    }
-    20% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, transparent),color-stop(35%, #c4a63e), color-stop(65%, #c4a63e), color-stop(65%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 35%,#c4a63e 35%, #c4a63e 65%, transparent 65%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 35%,#c4a63e 35%, #c4a63e 65%, transparent 65%, transparent 100%);
-    }
-    40% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, transparent),color-stop(30%, #a18a38), color-stop(70%, #a18a38), color-stop(70%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 30%,#a18a38 30%, #a18a38 70%, transparent 70%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 30%,#a18a38 30%, #a18a38 70%, transparent 70%, transparent 100%);
-    }
-    60% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent),color-stop(20%, #88783f), color-stop(80%, #88783f), color-stop(80%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 20%,#88783f 20%, #88783f 80%, transparent 80%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 20%,#88783f 20%, #88783f 80%, transparent 80%, transparent 100%);
-    }
-    80% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, transparent),color-stop(10%, #6a603d), color-stop(90%, #6a603d), color-stop(90%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 10%,#6a603d 10%, #6a603d 90%, transparent 90%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 10%,#6a603d 10%, #6a603d 90%, transparent 90%, transparent 100%);
-    }
-    100% {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent),color-stop(0%, var(--text-color)), color-stop(100%, var(--text-color)), color-stop(100%, transparent), to(transparent));
-        background-image: -o-linear-gradient(transparent 0%, transparent 0%,var(--text-color) 0%, var(--text-color) 100%, transparent 100%, transparent 100%);
-        background-image: linear-gradient(transparent 0%, transparent 0%,var(--text-color) 0%, var(--text-color) 100%, transparent 100%, transparent 100%);
-    }
-}
-
-
-
-
-
 
 .sevrice-description-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include clean_ul;
 
     margin-top: 15px;
     margin-left: 115px;
@@ -564,21 +400,18 @@
 
 .serv-descrtion-item{
     width: 700px;
-
-    background-size: initial;
-    background-repeat: no-repeat;
-    background-position: center right;
-
     height: 200px;
+
+    background: {
+        size: initial;
+        repeat: no-repeat;
+        position: center right;
+    };
+
+    p {
+        margin: 0;
+    }
 }
-.serv-descrtion-item p{
-    margin: 0;
-}
-
-
-
-
-
 .delivery-description{
     background-image: url(../img/MainContent/Services/delivery.svg);
 }
@@ -737,9 +570,6 @@
 
 .map_link:focus,
 .map_link:hover{
-    -webkit-transition: .2s;
-    -o-transition: .2s;
     transition: .2s;
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
-            box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
 }
