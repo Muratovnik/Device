@@ -24,6 +24,20 @@ body {
     color: #595959;
 }
 
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .main-footer {
+    flex-shrink: 0;
+  }
+
 a {
     text-decoration: none;
 }
