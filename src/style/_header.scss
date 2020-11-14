@@ -15,16 +15,15 @@
 
 }
 
-.item-header{
-    margin-bottom: 45px;
+.inner-page {
+    .main-header {
+        min-height: auto;
+        margin-bottom: 45px;
+    }
 }
 
 .main-header__coloumn{
     width: 500px;
-}
-
-.catalog-header {
-    margin-bottom: 45px;
 }
 
 .main-header__logo {
