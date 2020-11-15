@@ -5,32 +5,32 @@ const WriteClose = Write.querySelector('.close-window')
 
 const WriteOpen = document.querySelector('.js-write-us__button')
 const NameField = Write.querySelector('#name-and-family')
-const MapOpen = document.querySelector('.map_link')
+const MapOpen = document.querySelector('.contacts__map-link')
 
 
 WriteOpen.addEventListener('click', function (evt) {
     evt.preventDefault()
-    Write.classList.remove('visually-hidden')
+    Write.classList.remove('hidden')
     Write.classList.add('js-modal-animation')
 
-    NameField.focus()
+    // NameField.focus()
 });
 
 WriteClose.addEventListener('click', function (evt) {
         evt.preventDefault()
-        Write.classList.add('visually-hidden')
+        Write.classList.add('hidden')
         Write.classList.remove('js-modal-animation')
     });
 
 MapOpen.addEventListener('click', function (evt) {
     evt.preventDefault()
-    MapModule.classList.remove('visually-hidden')
+    MapModule.classList.remove('hidden')
     MapModule.classList.add('js-modal-animation')
 });
 
 MapClose.addEventListener('click', function (evt) {
     evt.preventDefault()
-    MapModule.classList.add('visually-hidden')
+    MapModule.classList.add('hidden')
     MapModule.classList.remove('js-modal-animation')
 });
 
@@ -40,12 +40,11 @@ MapClose.addEventListener('click', function (evt) {
 window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
 
-        if (Write.classList.contains('visually-hidden')) {
+        if (Write.classList.contains('hidden')) {
 
         } else {
             evt.preventDefault()
-
-            Write.classList.add('visually-hidden')
+            Write.classList.add('hidden')
         }
     }
 })
@@ -53,12 +52,12 @@ window.addEventListener('keydown', function (evt) {
 window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
 
-        if (MapModule.classList.contains('visually-hidden')) {
+        if (MapModule.classList.contains('hidden')) {
 
         } else {
             evt.preventDefault()
 
-            MapModule.classList.add('visually-hidden')
+            MapModule.classList.add('hidden')
         }
     }
 })

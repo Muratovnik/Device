@@ -125,6 +125,13 @@ title{
     background-color: #e2e2e2;
 }
 
+.js-modal-animation{
+    animation: {
+        name: bounce;
+        duration: .4s;
+    };
+}
+
 
 
 /* /Meta styles */

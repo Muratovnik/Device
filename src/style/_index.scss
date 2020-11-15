@@ -405,6 +405,7 @@
 --------------------- */
 
 .about-company{
+    position: relative;
     @include df-sb;
     margin-bottom: 80px;
 }
@@ -473,10 +474,6 @@
 }
 
 /* ---------------------
-   end About us section
---------------------- */
-
-/* ---------------------
    Contacts section
 --------------------- */
 
@@ -504,24 +501,19 @@
     }
 }
 
-/* ---------------------
-   end Contacts section
---------------------- */
-
 
 /* ---------------------
    Write us popup
 --------------------- */
+
 .write-us{
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -480px;
-    margin-top: -300px;
-    padding: 100px;
 
     width: 960px;
-    height: auto;
+    padding: 100px;
+    transform: translate(-50%, -50%);
 
     background-color: #ffffff;
     box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
@@ -531,8 +523,7 @@
         display: block;
         width: max-content;
     
-        color: rgba(0, 0, 0, 1);
-    
+        color: var(--text-color);
         @include font(18px, 24px);
     
         padding: 9px 44px;
@@ -552,41 +543,39 @@
 }
 
 
-.name-and-email-wrap{
+.write-us__wrap {
     @include df-sb;
     margin: 0;
     margin-bottom: 35px;
 }
 
-.write-us-item{
+.write-us__item{
     margin: 0;
 }
 
-.write-us-letter{
-    height: auto;
+.write-us__letter{
+    position: relative;
     margin-bottom: 40px;
 }
 
-.write-us-label{
+.write-us__label{
     display: block;
     margin-bottom: 10px;
 
     color: rgba(70, 70, 70, 1);
-    @include font(18px, 24px);
     font-family: $font_gilroy;
-    
+    @include font(18px, 24px);
+
     pointer-events: none;
 }
 
 .write-us input,
-.write-us-textarea{
+.write-us__textarea{
     width: 360px;
-    height: auto;
     border: none;
 
-    font-size: 18px;
-    line-height: 24px;
     color: rgba(70, 70, 70, .4);
+    @include font (18px, 24px, 700);
 	
     background-color: rgba(229, 229, 229, .5);
 
@@ -602,39 +591,31 @@
         background-color: rgba(229, 229, 229, .8);
     }
     &:focus {
-        padding: {
-            top: 15px;
-            right: 18px;
-            bottom: 15px;
-            left: 15px;
-        };
-        border: 3px solid #f7e296;
+        box-shadow: inset 0px 0px 0px 3px #f7e296;
         color: rgba(70, 70, 70, 1);
         background-color: transparent;
     }
 }
 
-.write-us-textarea{
+.write-us__textarea{
     display: block;
 
+    box-sizing: border-box;
     width: 100% !important;
     min-height: 155px;
     max-height: 155px;
     overflow: auto;
 }
 
-.invaild-property{
+.invalid{
     background-color: rgba(237,181,181, .5) !important;
 
     &:hover,
     &:focus {
-        background-color: rgba(237,181,181, 1) !important;
+        background-color: rgb(237, 181, 181) !important;
         border: none !important;
-        padding: 18px 21px 18px 21px !important;
     }
 }
-
-
 .close-window{
     position: absolute;
 
@@ -651,6 +632,7 @@
     background: transparent;
 
     opacity: .5;
+    z-index: 4;
 
     &:hover,
     &:focus {
@@ -662,10 +644,6 @@
     }
 }
 
-/* ---------------------
-   end Write us popup
---------------------- */
-
 
 /* ---------------------
         Map popup
@@ -673,12 +651,11 @@
 
 .big-map{
 
-    position: fixed;
+    position: absolute;
 
-    top: 50%;
+    top: 30%;
     left: 50%;
-    margin-left: -480px;
-    margin-top: -280px;
+    transform: translate(-50%, -50%);
 
     width: 960px;
     height: 560px;
@@ -700,12 +677,7 @@
     }
 }
 
-.js-modal-animation{
-    animation: {
-        name: bounce;
-        duration: .5s;
-    };
-}
+
 
 /* ---------------------
     end Map popup
