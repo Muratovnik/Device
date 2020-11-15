@@ -8,145 +8,145 @@ html(lang="ru")
 
         main.content
             .container
-                header.item-navigation
+                header.inner-navigation
                     h2 Моноподы для селфи
                     ul.bread-crumbs
-                        li.crumb-item
-                            a.crumb(href="index.html")
+                        li.bread-crumbs__item
+                            a.bread-crumbs__link(href="index.html")
                                 | Главная
-                        li.crumb-item
-                            a.crumb(href="")
+                        li.bread-crumbs__item
+                            a.bread-crumbs__link(href="")
                                 | Каталог товаров
-                        li.crumb-item
-                            a.crumb(href="")
+                        li.bread-crumbs__item
+                            a.bread-crumbs__link(href="")
                                 | Моноподы для селфи
             section.main-content
                 .container
                     section.filter
-                        h3.headline3 Фильтр:
+                        h3.filter__title Фильтр:
                         form(action="" method="GET")
-                            .filter-cost-wrap
-                                label.filter-headline(for="filter-cost") Стоимость
-                                input#filter-cost(name="filter-cost" disabled="" type="range" min="0" max="9000" value="5000")
+                            .filter__cost-wrap
+                                label.filter__caption(for="filter-cost") Стоимость
+                                input#filter__cost(name="filter-cost" disabled="" type="range" min="0" max="9000" value="5000")
                                 table.cost-range
                                     tr
                                         td От 0
-                                        td.range-to До 5000
-                            fieldset.filter-colors
-                                p.filter-headline Цвет
-                                ul.filter-colors-list
-                                    li.colors-item
-                                        input#color-black(type="checkbox" name="checkbox-color")
-                                        label.colors-checkbox(for="color-black") Черный
-                                    li.colors-item
-                                        input#color-white(type="checkbox" name="checkbox-color")
-                                        label.colors-checkbox(for="color-white")
+                                        td.cost-range__range-to До 5000
+                            fieldset.filter__colors-wrap
+                                h4.filter__caption Цвет
+                                ul.filter__colors
+                                    li.filter__color
+                                        input#color-black(type="checkbox" name="color-black")
+                                        label.filter__checkbox(for="color-black") Черный
+                                    li.filter__color
+                                        input#color-white(type="checkbox" name="color-white")
+                                        label.filter__checkbox(for="color-white")
                                             | Белый
-                                    li.colors-item
-                                        input#color-blue(type="checkbox" name="checkbox-color")
-                                        label.colors-checkbox(for="color-blue")
+                                    li.filter__color
+                                        input#color-blue(type="checkbox" name="color-blue")
+                                        label.filter__checkbox(for="color-blue")
                                             | Синий
-                                    li.colors-item
-                                        input#color-red(type="checkbox" name="checkbox-color")
-                                        label.colors-checkbox(for="color-red")
+                                    li.filter__color
+                                        input#color-red(type="checkbox" name="color-redr")
+                                        label.filter__checkbox(for="color-red")
                                             | Красный
-                                    li.colors-item
-                                        input#color-pink(type="checkbox" name="checkbox-color")
-                                        label.colors-checkbox(for="color-pink")
+                                    li.filter__color
+                                        input#color-pink(type="checkbox" name="color-pink")
+                                        label.filter__checkbox(for="color-pink")
                                             | Розовый
-                            fieldset.bluetooth-choose
-                                p.filter-headline Bluetooth
-                                ul.bluetooth-list
-                                    li.bluetooth-item
+                            fieldset.filter__bluetooth-wrap
+                                h4.filter__caption Bluetooth
+                                ul.filter__bluetooth-list
+                                    li.filter__bluetooth-item
                                         input#bluetooth-yes(type="radio" checked="" name="bluetooth")
-                                        label.bluetooth-radio(for="bluetooth-yes")
+                                        label.filter__radio(for="bluetooth-yes")
                                             | Есть
-                                    li.bluetooth-item
+                                    li.filter__bluetooth-item
                                         input#bluetooth-no(type="radio" name="bluetooth")
-                                        label.bluetooth-radio(for="bluetooth-no")
+                                        label.filter__radio(for="bluetooth-no")
                                             | Нет
                             input.button(type="submit")
                     section.catalog
-                        section.catalog-sort
-                            h3.headline3 Сортировка:
-                            ul.sort-list
-                                li.sort-item
-                                    a.sort-link.current-link(href="")
+                        section.sorting
+                            h3.sorting__title Сортировка:
+                            ul.sorting__list
+                                li.sorting__item
+                                    a.sorting__link.-current(href="#")
                                         | По цене
-                                li.sort-item
-                                    a.sort-link(href="")
+                                li.sorting__item
+                                    a.sorting__link(href="#")
                                         | По типу
-                                li.sort-item
-                                    a.sort-link(href="")
+                                li.sorting__item
+                                    a.sorting__link(href="#")
                                         | По популярности
-                                ul.sort-method
-                                    li.method-item
-                                        a.ascending-link(href="")
+                                ul.sorting__methods
+                                    li.sorting__method
+                                        a.sorting__method-link.-asc(href="")
                                             span.visually-hidden По возрастанию
-                                    li.method-item
-                                        a.descending-link.current-method(href="")
+                                    li.sorting__method
+                                        a.sorting__method-link.-dsc.-current(href="")
                                             span.visually-hidden По убыванию
-                        section.main-catalog
-                            h2.visually-hidden Каталог
-                            section.catalog-items
-                                ul.catalog-items-list
-                                    li.catalog-item
-                                        .catalog-img
-                                            img(src="img/MainContent/Items/Item-1.jpg" alt="")
-                                        .item-buy
-                                            button.button В корзину
-                                            a(href="#") Добавить к сравнению
-                                        table.item-descritpion
-                                            tr
-                                                th.item-name
-                                                    | Любительская селфи-палка
-                                                td.item-cost 500 руб.
-                                    li.catalog-item
-                                        .catalog-img
-                                            img(src="img/MainContent/Items/Item-2.jpg" alt="")
-                                        .item-buy
-                                            button.button В корзину
-                                            a(href="#") Добавить к сравнению
-                                        table.item-descritpion
-                                            tr
-                                                th.item-name
-                                                    | Профессиональная селфи-палка
-                                                td.item-cost 1 500 руб.
-                                    li.catalog-item
-                                        .catalog-img
-                                            img(src="img/MainContent/Items/Item-3.jpg" alt="")
-                                        .item-buy
-                                            button.button В корзину
-                                            a(href="#") Добавить к сравнению
-                                        table.item-descritpion
-                                            tr
-                                                th.item-name
-                                                    | Непотопляемая селфи-палка
-                                                td.item-cost 2 500 руб.
-                                    li.catalog-item.new-item
-                                        .catalog-img
-                                            img(src="img/MainContent/Items/Item-4.jpg" alt="")
-                                        .item-buy
-                                            button.button В корзину
-                                            a(href="#") Добавить к сравнению
-                                        table.item-descritpion
-                                            tr
-                                                th.item-name
-                                                    | Селфи-палка «Следуй за мной»
-                                                td.item-cost 4 900 руб.
-                            nav.catalog-navigation
-                                a.catalog-navigation__button(href="#") Назад
-                                ul.pages-list
-                                    li.pages-item
-                                        a.pages-link.current-page-link(href="#")
+
+                        h2.visually-hidden Каталог
+                        .catalog__wrap
+                            ul.catalog__list
+                                li.catalog__item
+                                    .catalog__img-wrap
+                                        img(src="img/MainContent/Items/Item-1.jpg" alt="")
+                                    .catalog__buy-block
+                                        button.button В корзину
+                                        a(href="#") Добавить к сравнению
+                                    table.catalog__description
+                                        tr
+                                            th.catalog__name
+                                                | Любительская селфи-палка
+                                            td.catalog__cost 500 руб.
+                                li.catalog__item
+                                    .catalog__img-wrap
+                                        img(src="img/MainContent/Items/Item-2.jpg" alt="")
+                                    .catalog__buy-block
+                                        button.button В корзину
+                                        a(href="#") Добавить к сравнению
+                                    table.catalog__description
+                                        tr
+                                            th.catalog__name
+                                                | Профессиональная селфи-палка
+                                            td.catalog__cost 1 500 руб.
+                                li.catalog__item
+                                    .catalog__img-wrap
+                                        img(src="img/MainContent/Items/Item-3.jpg" alt="")
+                                    .catalog__buy-block
+                                        button.button В корзину
+                                        a(href="#") Добавить к сравнению
+                                    table.catalog__description
+                                        tr
+                                            th.catalog__name
+                                                | Непотопляемая селфи-палка
+                                            td.catalog__cost 2 500 руб.
+                                li.catalog__item.-new
+                                    .catalog__img-wrap
+                                        img(src="img/MainContent/Items/Item-4.jpg" alt="")
+                                    .catalog__buy-block
+                                        button.button В корзину
+                                        a(href="#") Добавить к сравнению
+                                    table.catalog__description
+                                        tr
+                                            th.catalog__name
+                                                | Селфи-палка «Следуй за мной»
+                                            td.catalog__cost 4 900 руб.
+                            nav.catalog__nav
+                                a.catalog__nav-btn(href="#") Назад
+                                ul.catalog__nav-list
+                                    li.catalog__nav-item
+                                        a.catalog__page-link.-current(href="#")
                                             | 1
-                                    li.pages-item
-                                        a.pages-link(href="#")
+                                    li.catalog__nav-item
+                                        a.catalog__page-link(href="#")
                                             | 2
-                                    li.pages-item
-                                        a.pages-link(href="#")
+                                    li.catalog__nav-item
+                                        a.catalog__page-link(href="#")
                                             | 3
-                                a.catalog-navigation__button(href="#") Вперед
+                                a.catalog__nav-btn(href="#") Вперед
 
 
         include modules/_footer
