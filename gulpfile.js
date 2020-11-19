@@ -14,7 +14,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'); //для сжатия JS
     
 var browserSync = require('browser-sync').create(); //производит автообновление страницы
-var prettyHtml = require('gulp-pretty-html');
 
 //Объединение, компиляция Sass в CSS, простановка венд. префиксов и дальнейшая минимизация кода
 gulp.task("sass", function(param) {
@@ -49,12 +48,6 @@ gulp.task('pug', function(param){
 			stream: true
 		}));
     param();
-});
-
-gulp.task('pages', function () {
-  return gulp.src('dist/**/*.html')
-      .pipe(prettyHtml())
-      .pipe(gulp.dest('dist'))
 });
 
 //scripts
